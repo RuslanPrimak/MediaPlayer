@@ -82,11 +82,10 @@ public class MediaPlayerHandler {
             @Override
             public void run() {
                 mSeekBar.setProgress(100 * mPlayer.getCurrentPosition() / mDuration);
-                mHandler.postDelayed(updateSeekBar, 500);
+                if (mPlayer.isPlaying())
+                    mHandler.postDelayed(updateSeekBar, 500);
             }
         };
-
-        mHandler.post(updateSeekBar);
     }
 
     /**
@@ -122,6 +121,7 @@ public class MediaPlayerHandler {
             mPlayer.seekTo(0);
         } else {
             mPlayer.start();
+            mHandler.post(updateSeekBar);
         }
     }
 
