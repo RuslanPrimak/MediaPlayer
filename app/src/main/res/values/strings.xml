@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Media Player</string>
+    <string name="playButtonName">Play</string>
+    <string name="pauseButtonName">Pause</string>
+    <string name="btnUpVolumeName">+</string>
+    <string name="btnDownVolumeName">-</string>
+    <string name="ToastVolumeFormat">Volume %.2f%%</string>
+</resources>
